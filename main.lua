@@ -1,7 +1,6 @@
 --TODO
 
--- double bounce gravity level
---more gravity
+--red
 
 --Call to action download/sponsor
 
