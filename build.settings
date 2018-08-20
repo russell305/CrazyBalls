@@ -1,0 +1,82 @@
+settings = 
+{
+    android =
+    {
+        
+        usesPermissions =
+        {
+            "android.permission.INTERNET",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_COARSE_LOCATION",
+             "android.permission.ACCESS_NETWORK_STATE",
+        },
+    
+        
+    },
+
+    plugins =
+    {
+        
+        ["CoronaProvider.ads.vungle"] =
+        {
+            -- required
+            publisherId = "com.vungle",
+        },
+
+        --needed for android vungle
+         ["plugin.google.play.services"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+
+}, 
+    
+    orientation = 
+    {
+        default = "portrait",
+        supported = 
+        { 
+            "portrait", "portraitUpsideDown"
+        }
+    },
+
+    iphone =
+    {
+        plist=
+        {   
+
+            NSAppTransportSecurity =
+            {
+                NSAllowsArbitraryLoads = true
+            },
+            UIStatusBarHidden = true,
+            UIPrerenderedIcon = true,
+            UIApplicationExitsOnSuspend = false,
+            FacebookAppID = "177172005771659",
+           
+            
+            ---------------------
+            ---------------------
+            CFBundleURLTypes =
+            {
+            {
+            CFBundleURLSchemes =
+            {
+            "fb177172005771659",
+            },
+            },
+            },
+            -------------------------
+            -------------------------
+        },
+    },
+}
+
+
+
+
+
+
+
+
