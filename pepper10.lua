@@ -15,7 +15,7 @@ physics.start(true)
 physics.setGravity(0, 4)
 --physics.setDrawMode('hybrid')
 
-local iap = require("iap")
+
 local circle
 local bg
 local gameScore
@@ -39,7 +39,7 @@ local j = 0
 local k = 0
 local z = 0
 local hintpage
-local iap2
+
 
 local lines = {}
 local line_number = 1
@@ -94,7 +94,7 @@ function scene:createScene( event )
 	
   floor1 = display.newRect(w/2, h+5, w, 10)
   floor1.name = 'floor1'
-  floor1:setFillColor(255,0,0)
+  floor1:setFillColor(0,255,0)
   physics.addBody(floor1, "static",{bounce = 0.1, friction = .7} )
   group:insert(floor1)
 	
@@ -555,7 +555,7 @@ end
 		
                   if event.phase == "began" then
                   	
-                		iap2 = myIAP2:retrieve('iap21')
+                		
                 		--[[
                 		iapText = display.newText(iap2,15,15,"Arial", 15)
               		 group:insert(iapText)
@@ -563,15 +563,9 @@ end
                   elseif	event.phase == "ended" then
                  
                   	myButtonY:setEnabled( false )
-                  	if (iap2 == 4) then
-                   	hintpage()
+                  
                    	
-          		 	else
-          		 	
-          		 	
-          			 unlockH()--]]
-	
-		 	        end	
+          		 
          	
         	
         end
@@ -664,7 +658,7 @@ end
         		
          elseif	event.phase == "ended" then
           		--hintpage()
-         		iap.buyItem2(callbackFunction)
+         		
          	 	
        
         end
