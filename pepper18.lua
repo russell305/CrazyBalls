@@ -725,9 +725,7 @@ end
         physics.addBody(ball[j],"dynamic", {bounce=.6, radius = 10,density = .3,  friction=1 })
         group:insert(ball[j])
         j = j + 1
-        if (j==119) then
-          system.vibrate()
-        end 
+ 
   end
 function callTimer()
   tmr1 = timer.performWithDelay( 400, createBall, 2222 )

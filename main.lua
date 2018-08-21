@@ -1,6 +1,7 @@
 --TODO
 
 --red
+--icon
 
 --Call to action download/sponsor
 
@@ -16,7 +17,7 @@ local storyboard = require 'storyboard'
 --------VUNGLE------------------
 
 ads = require "ads"
-ads.init( "vungle", '630102331' )
+ads.init("vungle", '630102331')
 
 
 

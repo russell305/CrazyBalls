@@ -139,7 +139,7 @@ function scene:enterScene( event )
 		
 		floor1 = display.newRect(w/2, h+5, w, 10)
 		floor1.name = 'floor1'
-		floor1:setFillColor(255,0,0)
+		floor1:setFillColor(0,255,0)
 		physics.addBody(floor1, "static",{bounce = 0.1, friction = .7} )
 		group:insert(floor1)
 		floor1.anchorX = .5

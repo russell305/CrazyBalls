@@ -85,7 +85,7 @@ function scene:createScene( event )
 	bg.y = h - h/2
 	group:insert(bg)
 	
-	level = display.newText("Level 20",30,10,'marker felt', 20)
+	level = display.newText("Level 20",30,10,'marker felt', 15)
 	group:insert(level)
 	
 	circle = display.newCircle(w/2, 40, 25)
@@ -950,9 +950,7 @@ end
         physics.addBody(ball[j],"dynamic", {bounce=.6, radius = 7.5,density = .3,  friction=1 })
         group:insert(ball[j])
         j = j + 1
-        if (j==119) then
-        	system.vibrate()
-        end	
+
 	end
 function callTimer()
 	tmr1 = timer.performWithDelay( 400, createBall, 2222 )
