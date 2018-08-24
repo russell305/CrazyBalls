@@ -1,7 +1,9 @@
 --TODO
 
---red
---icon
+--call wendy appt (305) 358-3384
+--redo mj question from review/ pollfish, applovin remove?/Call to action download/sponsor
+
+-- extend background up to cover black all levels
 
 --Call to action download/sponsor
 
