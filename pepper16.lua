@@ -86,7 +86,7 @@ function scene:createScene( event )
 	bg.y = h - h/2
 	group:insert(bg)
 	
-	level = display.newText("Level 16",30,10,'marker felt', 20)
+	level = display.newText("Level 16",40,10,'marker felt', 15)
 	group:insert(level)
 	
 	circle = display.newCircle(30, 50, 25)

@@ -85,7 +85,7 @@ end
 	
 
 	
-	level = display.newText("Level 12",30,10,'marker felt', 20)
+	level = display.newText("Level 12",40,10,'marker felt', 15)
 	group:insert(level)
 	
 	circle = display.newCircle(w/2, 40, 25)
