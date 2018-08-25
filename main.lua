@@ -1,11 +1,13 @@
 --TODO
 
---call wendy appt (305) 358-3384
+--kurt
+--ppal nicola
 --redo mj question from review/ pollfish, applovin remove?/Call to action download/sponsor
-
--- extend background up to cover black all levels
-
---Call to action download/sponsor
+-- iphone 6s
+-- remove immersive sticky
+-- Call to action. put in review button at 14 and 27
+--dentist miami shores
+--  google play store
 
 
 
