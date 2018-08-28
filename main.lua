@@ -1,13 +1,16 @@
 --TODO
 
---kurt
---ppal nicola
---redo mj question from review/ pollfish, applovin remove?/Call to action download/sponsor
+--  kurt
+--  ppal nicola
+--  redo mj question from review/ pollfish, applovin remove?/Call to action download/sponsor
 -- iphone 6s
 -- remove immersive sticky
 -- Call to action. put in review button at 14 and 27
---dentist miami shores
---  google play store
+-- dentist miami shores
+-- modern dentistry 786-814-5105
+-- 
+--(305) 754-0062
+-- google play store
 
 
 
