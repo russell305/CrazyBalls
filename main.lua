@@ -69,7 +69,7 @@ storyboard.music = 1
 display.setDefault( "magTextureFilter", "nearest" )
 display.setDefault( "minTextureFilter", "linear" )
 
-
+--[[
 myData:clear()
 myData:save()
 
@@ -81,7 +81,7 @@ levels = myData:retrieve('levele')
 		print (levels)
 	
 if (levels == nil) then
-	myData:store('levele',27)
+	myData:store('levele',1)
     myData:save()
 end	
 --]]

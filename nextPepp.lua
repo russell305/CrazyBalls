@@ -1445,47 +1445,7 @@ if (storyboard.level==1) then
 		
 		
 		textwin3()
-		
-		local reward_text="Thank you for playing. If you enjoy my trivia game,\nplease leave a nice review in the Google Play store."
-        local options2 = 
-				        {
-				            text = reward_text,
-				            x = w/2,
-				            y= h-50,
-				            width = 650,   
-				            font = "marker felt",
-				            fontSize = 10,
-				            align = "center",
-				        }
-				    local line1 = display.newText(options2)
-				    line1:setFillColor( 0, 1, 0 )
-		group:insert(line1)
-
-		
-		reviewGame=function (event )
-
-			if event.phase == "began" then
-			        	reviewButton:scale(1.2,1.2)
-			        	audio.play(s5)
-			        elseif	event.phase == "ended" then
-			        	reviewButton:scale(.8334,.8334)
-			          system.openURL ( "https://play.google.com/store/apps/details?id=" .. googleAppID )
-			        end
-                     
-        end  
-
-
-       reviewButton = widget.newButton
-                        {defaultFile = "review-button.png",
-                            left = w/2-50,
-                            top = h-100,
-                            width = 100,
-                            height = 30,
-                            
-                            onEvent = reviewGame,
-                        }
-        group:insert( reviewButton ) 
-		
+	
 		number1star = display.newText('<150', w/2-70,270, 'futura', 15)
 		number1star:setTextColor(255,255,0)
 		group:insert(number1star)
@@ -2233,45 +2193,6 @@ end
 		bg1.y = h - h/2
 		group:insert(bg1)
 
-		local reward_text="Thank you for playing. If you enjoyed my trivia game, please leave a nice review in the Google Play store."
-        local options2 = 
-				        {
-				            text = reward_text,
-				            x = w/2,
-				            y= h/3,
-				            width = 650,   
-				            font = "marker felt",
-				            fontSize = 60,
-				            align = "center",
-				        }
-				    local line1 = display.newText(options2)
-				    line1:setFillColor( 0, 1, 0 )
-		group:insert(line1)
-
-		
-		reviewGame=function (event )
-
-			if event.phase == "began" then
-			        	reviewButton:scale(1.2,1.2)
-			        	audio.play(s5)
-			        elseif	event.phase == "ended" then
-			        	reviewButton:scale(.8334,.8334)
-			          system.openURL ( "https://play.google.com/store/apps/details?id=" .. googleAppID )
-			        end
-                     
-        end  
-
-
-       reviewButton = widget.newButton
-                        {defaultFile = "review-button.png",
-                            left = w/2-210,
-                            top = h/2,
-                            width = 420,
-                            height = 100,
-                            
-                            onEvent = reviewGame,
-                        }
-        group:insert( reviewButton ) 
 		
 
 		textwin3()

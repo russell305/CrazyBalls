@@ -828,6 +828,9 @@ function transitionA()
         		print ("1star")
         		myStars17:store('stars17',11)
         		myStars17:save()
+            else 
+            storyboard.star = 0
+            print ("0star")   
     end
     z=1
 	storyboard.gotoScene('nextPepp',"flipFadeOutIn",500)

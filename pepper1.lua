@@ -128,7 +128,7 @@ end
 	cup.y = h
 	group:insert(cup)
 	
-	gameScore = 1
+	gameScore = 10
 	
 	scoreText = display.newText(gameScore,0,0,"Arial", 15)
 	scoreText:setTextColor(0,0,0)
@@ -190,11 +190,11 @@ text3:setTextColor(250,250,250)
 --text3:setTextColor(200,200,0)
 group:insert(text3)
 
-text7 = display.newText("Draw as many lines",w-90,h/2-20+offset,'marker felt',20)
+text7 = display.newText("Draw as many lines",w-90,h/2+offset,'marker felt',20)
 text7:setTextColor(250,250,250)
 group:insert(text7)
 
-text8 = display.newText("as necessary.",w-90,h/2+offset,'marker felt',20)
+text8 = display.newText("as necessary.",w-90,h/2+offset+20,'marker felt',20)
 text8:setTextColor(250,250,250)
 group:insert(text8)
 
@@ -565,7 +565,12 @@ function transitionA()
         		print ("1star")
         		myStars1:store('stars1',11)
         		myStars1:save()
-    end
+        else 
+        		storyboard.star = 0
+        		print ("0star")
+        		
+        				
+   end
     print (stars)
     z=1
 	

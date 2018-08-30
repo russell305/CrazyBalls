@@ -727,21 +727,24 @@ end
 		lineT2:addEventListener("collision",lineT2)	
 
 function transitionA()
-	if j < 100 then
-				storyboard.star = 3
+	  if j < 100 then
+				    storyboard.star = 3
         		print ("3star")
         		myStars12:store('stars12',13)
         		myStars12:save()
     	elseif j < 125 then
-    			storyboard.star = 2
+    			  storyboard.star = 2
         		print ("2star")
         		myStars12:store('stars12',12)
         		myStars12:save()
     	elseif j < 150 then
-    			storyboard.star = 1
+    			  storyboard.star = 1
         		print ("1star")
         		myStars12:store('stars12',11)
         		myStars12:save()
+      else 
+            storyboard.star = 0
+            print ("0star")   
     end
     z=1
 	storyboard.gotoScene('nextPepp',"flipFadeOutIn",500)

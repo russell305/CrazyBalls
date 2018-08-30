@@ -283,7 +283,7 @@ function scene:enterScene( event )
 	 	myButton = widget.newButton{
     	defaultFile = "start.png",
     	left = w/2-60,
-        top = h/2,
+        top = h/2+50,
        width =120, height = 60,
      onEvent = onButtonEvent,
     }
@@ -299,7 +299,7 @@ function scene:enterScene( event )
 	 
  
 
-
+---[[
 
     ---------------------------------------------
     function btEmail(event)
@@ -311,7 +311,7 @@ function scene:enterScene( event )
 {
 to = "",
 subject = "Fun with Crazy Balls!",
-body = "Check out this really cool game Fun with Crazy Balls! - https://itunes.apple.com/us/app/fun-crazy-balls-extremely/id630102331?ls=1&mt=8",
+body = "Check out this really cool game Fun Crazy Balls! - https://play.google.com/store/apps/details?id=com.miamigames.games.funcrazyballs",
 attachment = { baseDir=system.DocumentsDirectory,
 filename="Screenshot.png", type="image" },
 }
@@ -336,7 +336,9 @@ end
       	onEvent = btEmail,
     }
     group:insert(myButtonEmail)
+    --]]
 -------------------------------------------------------------------------------
+---[[  
     function btText(event)
 	if event.phase == "began" then
 			myButtonText:scale(1.2,1.2)
@@ -344,7 +346,7 @@ end
     elseif event.phase == "ended" then
       	local options =
 			{
-				body = "Check out this really cool game Fun with Crazy Balls! - https://itunes.apple.com/us/app/fun-crazy-balls-extremely/id630102331?ls=1&mt=8",
+				body = "Check out this really cool game Fun Crazy Balls! - https://play.google.com/store/apps/details?id=com.miamigames.games.funcrazyballs",
 						
 			}
 			native.showPopup("sms", options)
@@ -368,9 +370,47 @@ end
       	onEvent = btText,
     }
     group:insert(myButtonText)
+--]]
+    reviewGame=function (event )
+         local deviceType = system.getInfo ( "platformName" )
+        local deviceVersion = system.getInfo ( "platformVersion" )
+
+        local appleAppID = "895489568"
+        local googleAppID = "com.miamigames.games.funcrazyballs"
+
+        local urlPrefix = "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id="
+        local urlSuffix = "&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"
+
+        if deviceType == "iPhone OS" then
+
+           if string.find ( deviceVersion, "7.0" ) then
+              system.openURL ( "itms-apps://itunes.apple.com/app/id" .. appleAppID )
+           else
+              system.openURL ( urlPrefix .. appleAppID .. urlSuffix )
+           end
+
+        else
+
+           system.openURL ( "https://play.google.com/store/apps/details?id=" .. googleAppID )
+                        
+        end
+    end  
+
+    reviewButton = widget.newButton
+{defaultFile = "review-button.png",
+    left = w/2-50,
+    top = h/2+150,
+    width = 100,
+    height = 40,
+    
+    onEvent = reviewGame,
+}
+group:insert( reviewButton ) 
 
 	 text()
 end
+
+
 
 
 -- Called when scene is about to move offscreen:

@@ -694,6 +694,9 @@ end
         		print ("1star")
         		myStars18:store('stars18',11)
         		myStars18:save()
+            else 
+            storyboard.star = 0
+            print ("0star")   
     end
     z=1
 	storyboard.gotoScene('nextPepp',"flipFadeOutIn",500)

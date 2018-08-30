@@ -90,6 +90,12 @@ function scene:createScene( event )
 	circle:setFillColor(0,0,0)
 	--physics.addBody(circle, "static",{bounce = 0.1, friction = .7} )
 	group:insert(circle)
+
+	dashB = display.newImageRect('dash3.png',w/2 ,h/4)
+	dashB.alpha = .5
+	dashB.x = w/2 +60
+	dashB.y = h-50
+	group:insert(dashB)
 	
 	floor1 = display.newRect(w/2, h+5, w, 10)
 	floor1.name = 'floor1'
@@ -97,11 +103,7 @@ function scene:createScene( event )
 	physics.addBody(floor1, "static",{bounce = 0.1, friction = .7} )
 	group:insert(floor1)	
 
-	dashB = display.newImageRect('dash3.png',w/2 ,h/4)
-	dashB.alpha = .5
-	dashB.x = w/2 +60
-	dashB.y = h-50
-	group:insert(dashB)
+	
 
 	cupA = display.newImageRect('cup1.png', 70, 93)
 	 cupA:setFillColor(255,0,0)
@@ -616,6 +618,9 @@ function transitionA()
         		print ("1star")
         		myStars2:store('stars2',11)
         		myStars2:save()
+        		else 
+        		storyboard.star = 0
+        		print ("0star")
     end
   
  	z=1 

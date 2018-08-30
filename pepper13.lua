@@ -287,28 +287,28 @@ function start()
      
      
   	onButtonEvent1 = function (event )
-        if event.phase == "began" then
+      if event.phase == "began" then
         	myButton1:scale(1.2,1.2)
         	audio.play(s5)
-         elseif	event.phase == "ended" then
+      elseif	event.phase == "ended" then
          	timer.cancel(tmr1)	
         	storyboard.gotoScene('loadMainMenu')
         	
-        end
+      end
     end
     	
  
-     myButton1 = widget.newButton{
-    	defaultFile = "Menu.png",
-    	--defaultColor = { default={ 0, 0, 255 }, over={  0, 0, 255} },
+    myButton1 = widget.newButton{
+    defaultFile = "Menu.png",
+
         id = "btn001",
         left = w-55,
         top = 5,
-      width =47, height = 47,
+        width =47, height = 47,
      	
       	onEvent = onButtonEvent1
     }
-	group:insert(myButton1)
+	 group:insert(myButton1)
 	
 	myButton:scale(.1,.1)
      transition.to(myButton,{time=300, xScale=1, yScale=1})
@@ -768,8 +768,8 @@ function lineT3:collision (event)
 		lineT3:addEventListener("collision",lineT3)	
 
 function transitionA()
-	if j < 125 then
-				storyboard.star = 3
+	   if j < 125 then
+				  storyboard.star = 3
         		print ("3star")
         		myStars13:store('stars13',13)
         		myStars13:save()
@@ -783,6 +783,9 @@ function transitionA()
         		print ("1star")
         		myStars13:store('stars13',11)
         		myStars13:save()
+            else 
+            storyboard.star = 0
+            print ("0star")   
     end
     z=1
 	storyboard.gotoScene('nextPepp',"flipFadeOutIn",500)
